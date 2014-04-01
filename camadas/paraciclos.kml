@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Bicicletários e Paraciclos Integrados ao Sistema de Transporte da Cidade de São Paulo</name>
+  <description><![CDATA[Mais informações:
+
+http://www.metro.sp.gov.br/
+0800-77 07 722 (Todos os dias das 5h30 às 23h30)
+
+http://www.viaquatro.com.br/
+Linha Amarela 0800-77 07 100
+
+http://www.cptm.sp.gov.br/
+0800 055 0121
+
+http://www.emtu.sp.gov.br/
+0800-72 40 555 (8h às 19h -2ª a 6ª feira)
+
+http://www.sptrans.com.br/
+156 (Todos os dias - 24h)
+]]></description>
+  <Style id="style40">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style43">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style45">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style47">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style50">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style38">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style48">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style52">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style37">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style54">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style23">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style51">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style44">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style36">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style33">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style21">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style56">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style31">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style34">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style24">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style39">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style41">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style35">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style53">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style29">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style22">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style28">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style30">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/subway.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style27">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style46">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style25">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style26">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style49">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style32">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style20">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style42">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style55">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/bus.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>Bicicletário Metrô Paraíso</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style40</styleUrl>
+    <Point>
+      <coordinates>-46.640869,-23.574883,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Liberdade</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style43</styleUrl>
+    <Point>
+      <coordinates>-46.635612,-23.554979,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Parada Inglesa</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style45</styleUrl>
+    <Point>
+      <coordinates>-46.608894,-23.487141,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Jardim Sâo Paulo</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style47</styleUrl>
+    <Point>
+      <coordinates>-46.616684,-23.492275,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Vila Prudente</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-46.581516,-23.584717,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário/Paraciclo Metrô Tamanduateí</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10 Bicicletário e 16 Paraciclo<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style50</styleUrl>
+    <Point>
+      <coordinates>-46.588081,-23.594902,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Vila Madalena</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style38</styleUrl>
+    <Point>
+      <coordinates>-46.690781,-23.546717,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Corinthians Itaquera</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h<br><br>&nbsp;</div>]]></description>
+    <styleUrl>#style48</styleUrl>
+    <Point>
+      <coordinates>-46.470516,-23.541859,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Artur Alvim</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>-46.484291,-23.540541,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Guilhermina Esperança</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-46.516800,-23.529327,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Vila Matilde</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style52</styleUrl>
+    <Point>
+      <coordinates>-46.530533,-23.531942,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Penha</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>-46.543686,-23.533970,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Carrão</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style37</styleUrl>
+    <Point>
+      <coordinates>-46.560917,-23.535583,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Belém</name>
+    <description><![CDATA[<div dir="ltr">Vagas:16</div>]]></description>
+    <styleUrl>#style54</styleUrl>
+    <Point>
+      <coordinates>-46.591022,-23.543943,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Brás</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style23</styleUrl>
+    <Point>
+      <coordinates>-46.616127,-23.545616,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Sé</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style51</styleUrl>
+    <Point>
+      <coordinates>-46.633701,-23.550926,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Anhangabaú</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16 <br><br></div>]]></description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>-46.639709,-23.547937,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Santa Cecília</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 10<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 7h às 22h</div>]]></description>
+    <styleUrl>#style44</styleUrl>
+    <Point>
+      <coordinates>-46.649754,-23.538691,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Palmeiras Barra-Funda</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16<br></div>]]></description>
+    <styleUrl>#style36</styleUrl>
+    <Point>
+      <coordinates>-46.666489,-23.526003,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Butantã</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 108<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 6h às 22h</div>]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-46.708717,-23.571617,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Metrô Pinheiros</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 80<br><br>Aluguel de bicicleta: não<br><br>Horário de Funcionamento: 6h às 22h</div>]]></description>
+    <styleUrl>#style33</styleUrl>
+    <Point>
+      <coordinates>-46.702248,-23.566553,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Vila das Belezas</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-46.734444,-23.643915,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Campo Limpo</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>-46.758884,-23.649046,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo Metrô Capão Redondo</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 16</div>]]></description>
+    <styleUrl>#style21</styleUrl>
+    <Point>
+      <coordinates>-46.768715,-23.659973,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Ceasa</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 164<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style56</styleUrl>
+    <Point>
+      <coordinates>-46.743629,-23.537098,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Biciletário CPTM Jaguaré</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 233<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style31</styleUrl>
+    <Point>
+      <coordinates>-46.733521,-23.545853,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Biciletário CPTM Cidade Universitária</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 60<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style34</styleUrl>
+    <Point>
+      <coordinates>-46.711765,-23.557467,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Vila Olímpia</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 94<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style24</styleUrl>
+    <Point>
+      <coordinates>-46.692924,-23.593094,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Autódromo</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 261<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style39</styleUrl>
+    <Point>
+      <coordinates>-46.688721,-23.706249,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Jurubatuba</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 262<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style41</styleUrl>
+    <Point>
+      <coordinates>-46.702496,-23.677425,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Primavera-Interlagos</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 226<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-46.691811,-23.722242,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Biciletário CPTM Grajaú</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 178<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style35</styleUrl>
+    <Point>
+      <coordinates>-46.695736,-23.734695,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Tamanduateí</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 164<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style53</styleUrl>
+    <Point>
+      <coordinates>-46.587784,-23.594814,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Comendador Ermelino</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 196<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style29</styleUrl>
+    <Point>
+      <coordinates>-46.482899,-23.485537,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM USP Leste</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 270<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style22</styleUrl>
+    <Point>
+      <coordinates>-46.503109,-23.485870,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Itaim Paulista</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 256<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-46.402603,-23.494658,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Jd. Helena- Vila Mara</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 256<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style28</styleUrl>
+    <Point>
+      <coordinates>-46.420410,-23.492807,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Paraciclo CPTM São Miguel Paulista</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 33<br></div>]]></description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>-46.441914,-23.490761,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário CPTM Jardim Romano</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 270<br>Horário de Funcionamento: de Domingo à Sexta-Feira, das 04h à 0h. Aos Sábados das 04h à 01h.</div>]]></description>
+    <styleUrl>#style30</styleUrl>
+    <Point>
+      <coordinates>-46.385307,-23.484739,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário EMTU Terminal Jabaquara</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 225<br>Horário de Funcionamento: das 6h00 às 22h00, de segunda a domingo, exceto feriados</div>]]></description>
+    <styleUrl>#style27</styleUrl>
+    <Point>
+      <coordinates>-46.642799,-23.646412,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário EMTU Terminal São Matheus</name>
+    <description><![CDATA[<div dir="ltr">Vagas:110<br>Horário de Funcionamento: das 6h00 às 22h00, de segunda a domingo, exceto feriados</div>]]></description>
+    <styleUrl>#style46</styleUrl>
+    <Point>
+      <coordinates>-46.476116,-23.613228,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Mercado</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 72</div>]]></description>
+    <styleUrl>#style25</styleUrl>
+    <Point>
+      <coordinates>-46.628746,-23.547218,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Sapopemba Teotônio</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 42</div>]]></description>
+    <styleUrl>#style26</styleUrl>
+    <Point>
+      <coordinates>-46.501286,-23.614153,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Sacomã</name>
+    <description><![CDATA[<div dir="ltr">Vagas:146</div>]]></description>
+    <styleUrl>#style49</styleUrl>
+    <Point>
+      <coordinates>-46.602314,-23.602468,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Parada R. do Grito- Expresso Tiradentes</name>
+    <description><![CDATA[<div dir="ltr">Vagas:86</div>]]></description>
+    <styleUrl>#style32</styleUrl>
+    <Point>
+      <coordinates>-46.597401,-23.598389,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Parada NSRA Aparecida- Expresso Tiradentes</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 46</div>]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-46.597847,-23.591373,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Parada Pedro II- Expresso Tiradentes</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 94</div>]]></description>
+    <styleUrl>#style20</styleUrl>
+    <Point>
+      <coordinates>-46.626846,-23.550735,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Parada Clube Atlético Ipiranga- Expresso Tiradentes</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 66</div>]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-46.603168,-23.574465,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário Parada Alberto Lion- Expresso Tiradentes</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 28</div>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-46.611179,-23.563583,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Parada Ana Nery- Expresso Tiradentes</name>
+    <description><![CDATA[<div dir="ltr">Vagas:90</div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-46.615108,-23.558550,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Guarapiranga</name>
+    <description><![CDATA[<div dir="ltr">Vagas:7</div>]]></description>
+    <styleUrl>#style42</styleUrl>
+    <Point>
+      <coordinates>-46.735294,-23.668961,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Campo Limpo</name>
+    <description><![CDATA[<div dir="ltr">Vagas:50</div>]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-46.771965,-23.631699,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Varginha</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 14</div>]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-46.716187,-23.767328,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Pirituba</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 21</div>]]></description>
+    <styleUrl>#style55</styleUrl>
+    <Point>
+      <coordinates>-46.725712,-23.485920,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Vl. Nova Cachoeirinha</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 25</div>]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-46.670502,-23.475657,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bicicletário SPTrans Terminal Pinheiros</name>
+    <description><![CDATA[<div dir="ltr">Vagas: 30</div>]]></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>-46.701946,-23.566603,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

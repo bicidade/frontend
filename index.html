@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Bicidade - O Gerador de rotas sem ladeiras!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="leaflet/leaflet.css" type="text/css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- Arquivos que o Fassoni adicionou -->
+            <link rel="stylesheet" href="leaflet/leaflet.css">
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <script type="application/javascript" src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="leaflet/leaflet-draw/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="leaflet/leaflet-draw/leaflet.draw.css">
+    <link rel="stylesheet" href="leaflet/leaflet-awesome-markers/leaflet.awesome-markers.css">
+    <script src="leaflet/leaflet-awesome-markers/leaflet.awesome-markers.min.js"></script>
+    <script src="js/togeojson.js"></script>
+        <script src="leaflet/leaflet-bouncemaker/bouncemarker.js"></script>
+        <!-- Fim dos arquivos que o Fassoni adicionou -->
+
+        <!-- Código monstro do Javascript -->
+    <script>
+
+            if (!navigator.geolocation){
+                alert("Vixe, seu navegador não aceita geolocalização. Não poderemos te achar no mapa, sorry.<br>Mas pelo menos voce pode fazer suas rotas.");
+            }
+
+            navigator.geolocation.getCurrentPosition(function() {console.log("o navegador achou o ponto")},
+                                                     function() {console.log("Navegador não quer cooperar com a causa da geolocalização")},
+                                                     {enableHighAccuracy: true});
+
+
+
+             var array_layers = [];
+             var map;
+             var pontoPartida;
+            var pontoDestino;
+            $(window).load(function() {
+                function resize(){
+                	$('#map').height($(window).height() - $('.navbar').height());
+                	$('#map').width($(window).width());
+                	$('#map').css('margin-top', 50);
+            }
+            // Já dá resize de primeira
+            resize();
+            $(window).on("resize", resize);
+
+            // Now we create the map
+            // set up the map
+
+            map = new L.Map('map');
+            // create the tile layer with correct attribution
+            var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osm = new L.TileLayer(osmUrl, {minZoom: 3, maxZoom: 19, attribution: osmAttrib});
+            map.setView(new L.LatLng(-23.5, -46.6),15);
+            map.addLayer(osm);
+            resize();
+
+	///////////////////////////////////////////
+    // PÕE CAMADA DE PARACICLOS
+    ///////////////////////////////////////////
+
+var greenIcon = L.icon({
+
+  iconUrl: 'images/bikezinha.png',
+  shadowUrl: 'images/bikezinha_shadow.png',
+
+  iconSize:     [32, 32], // size of the icon
+  shadowSize:   [38, 12], // size of the shadow
+  iconAnchor:   [16, 16], // point of the icon which will correspond to marker's location
+  shadowAnchor: [16, -9]  // the same for the shadow
+  //popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+
+});
+
+    var paraciclos_json;
+    $.ajax("camadas/paraciclos.kml").done(function(xml) {
+		    paraciclos_json = toGeoJSON.kml(xml);
+		    //console.log(toGeoJSON.kml(xml));
+		    L.geoJson(paraciclos_json, {
+				onEachFeature: function(feature, layer){layer.bindPopup(feature.properties.name);},
+				pointToLayer: function (feature, latlng) {
+						return L.marker(latlng, {icon: greenIcon });
+			}}).addTo(map);
+	});
+    var json_ciclovias;
+    $.ajax("camadas/ciclovias_permanentes.kml").done(function(xml) {
+		    json_ciclovias = toGeoJSON.kml(xml);
+		    //console.log(toGeoJSON.kml(xml).properties.name);
+		    L.geoJson(json_ciclovias, {
+				onEachFeature: function(feature, layer){layer.bindPopup(feature.properties.name);},
+				style: function(feature){
+				if(feature.properties.name.indexOf("Calçada Compartilhada") != -1){return {color: "#fffa00"}};
+				if(feature.properties.name.indexOf("Ciclorrota") != -1){return {color: "#00feff"}};
+
+				if(feature.properties.name.indexOf("Ciclovia") != -1){return {color: "#ff00f0"}};
+
+				if(feature.properties.name.indexOf("Ciclofaixa") != -1){return {color: "#00fff0"}};
+				}
+
+				}).addTo(map);
+	});
+
+
+
+    ///////////////////////////////////////////
+    // PÕE CAMADA DE ROTAS DE BICICLETA
+    ///////////////////////////////////////////
+
+
+    //L.control.layers(texto_para_widget_controle).addTo(map);
+
+
+ /**
+ * Acha o ponto de partida do indivíduo
+ */
+$('#btnOrigem').on('click', function(){
+  $('#modalOrigem').modal('hide');
+
+  if( $('#inputOrigem').val() !== "") { /* Aí faz o AJAX para pegar endereço */
+    $.ajax({
+      type: "GET",
+      url: "http://open.mapquestapi.com/nominatim/v1/search",
+      data: {
+          q: $('#inputOrigem').val(),
+          city: "São Paulo",
+          state:"SP", /* Só temos a cidade de São Paulo por enquanto... */
+          country: "BR", /* Sempre é Brasil... */
+          format: "jsonv2",
+          limit: 1
+      }})
+      .success(function(data) {
+        pontoPartida = new L.LatLng(data[0].lat, data[0].lon);
+        L.marker(pontoPartida).addTo(map);
+        map.setView(pontoPartida,17);})
+      .error(function() {alert("O OpenStreetMaps não conseguiu achar seu ponto de origem.\nVocê não quer colaborar lá?")});
+  } else {
+    alert("Você não digitou um endereço.\nAí não tem como trabalhar.");
+  }
+});
+
+ /**
+ * Acha o ponto de chegada do indivíduo
+ */
+$('#btnDestino').on('click', function(){
+  $('#modalDestino').modal('hide');
+
+  if( $('#inputDestino').val() !== "") { /* Aí faz o AJAX para pegar endereço */
+    $.ajax({
+      type: "GET",
+      url: "http://open.mapquestapi.com/nominatim/v1/search",
+      data: {
+          q: $('#inputDestino').val(),
+          city: "São Paulo",
+          state:"SP", /* Só temos a cidade de São Paulo por enquanto... */
+          country: "BR", /* Sempre é Brasil... */
+          format: "jsonv2",
+          limit: 1
+      }})
+      .success(function(data) {
+        pontoDestino = new L.LatLng(data[0].lat, data[0].lon);
+        L.marker(pontoDestino).addTo(map);
+        map.setView(pontoDestino,17);})
+      .error(function() {alert("O OpenStreetMaps não conseguiu achar seu ponto de origem.\nVocê não quer colaborar lá?")});
+  } else {
+    alert("Você não digitou um endereço.\nAí não tem como trabalhar.");
+  }
+});
+
+/**
+ * Traçado da Rota!
+*/
+function faz_rota() {
+    if(pontoPartida && pontoDestino){
+        var y0 = pontoPartida.lat;
+        var x0 = pontoPartida.lng;
+        var y1 = pontoDestino.lat;
+        var x1 = pontoDestino.lng;
+        var mao_checked = $('#chkContramao').is(':checked');
+        var rota_checked = $('#chkCiclorrota').is(':checked');
+        var ladeira_checked = $('#chkLadeira').is(':checked');
+        var url = "http://alien9.net/route/?y0=" + y0 +  "&x0="+ x0 + "&y1="+y1 +"&x1="+x1+"&crit=";
+        if (mao_checked) {url = url + "mao,"};
+        if (rota_checked) {url = url + "ciclorota,"};
+        if (ladeira_checked) {url = url + "subida"};
+              //showOverlay();
+        $.getJSON(url,function(data) {
+            var rota = L.geoJson(data, {onEachFeature: function(feature, layer) {
+            pop = layer.bindPopup("<b>Distância: "+ (data["dist"]/1000).toFixed(2) + "km</b><br>Elevação: "+ data["alt"].toFixed(0) + " metros")
+            }});
+                  array_layers.push(rota);
+            //rota.bindPopup("Isto deve servir").openPopup();
+            rota.addTo(map);
+            pop.openPopup();
+            map.fitBounds(rota.getBounds());
+                  //hideOverlay();
+        });
+    }else{
+        alert("Você não marcou origem e destino.\nÉ impossível fazer rota desse jeito!");
+        return; // O mundo não está preparado para nossa rota!
+    };
+};
+
+$('#btnRota').click(function() {
+  faz_rota();
+});
+
+
+
+}); // Fim do $('window').load()
+
+
+    </script>
+        <!-- Fim do Código monstro do Javascript -->
+
+
+        <!-- CSS code from Bootply.com editor -->
+
+        <style type="text/css">
+            html,body{
+  	height:100%;
+}
+
+#map {
+	width:100%;
+    height:100%;
+}
+        </style>
+</head>
+    <body>
+    <div class="modal fade" id="modalOrigem" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" data-keyboard="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Digite o endereço de origem</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Endereço de Origem" id="inputOrigem">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-default" id="btnOrigem">Ache!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDestino" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" data-keyboard="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Digite o endereço de destino</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Endereço de Destino" id="inputDestino">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-default" id="btnDestino">Ache!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRota" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" data-keyboard="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Opções de Rota</h4>
+                </div>
+                <div class="modal-body">
+                Escolha as opções de sua rota. Se você não escolher nenhuma, traçaremos a rota mais curta entre os dois pontos.
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="chkLadeira" value="">
+                                        Não gosto de ladeira!
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="chkContramao" value="">
+                                        Posso andar na contramão
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="chkCiclorrota" value="">
+                                        Prefiro ciclorrota
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-default" data-dismiss="modal" id="btnRota">Ache Rota!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bicidade</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div style="height: 1px;" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Me Ache</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalOrigem">Marque Origem</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalDestino">Marque Destino</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalRota">Traçe rota</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Quem fez</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="map"></div>
+
+
+   </body></html>
