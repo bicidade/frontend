@@ -42,6 +42,8 @@
              var map;
              var pontoPartida;
             var pontoDestino;
+            var marcadorUsuarioNoMapa = false;
+            var marcadorUsuario = L.marker([0,0], {bounceOnAdd: true});
             $(window).load(function() {
                 function resize(){
                 	$('#map').height($(window).height() - $('.navbar').height());
@@ -53,17 +55,33 @@
             $(window).on("resize", resize);
 
             // Now we create the map
+function onLocationFound(e) {
+    console.log("Entrou on onLocationFound");
+    //var radius = e.accuracy/2;
+    marcadorUsuario.setLatLng(e.latlng);
+    if(!marcadorUsuarioNoMapa){
+      array_layers.push(marcadorUsuario);
+    }
+    //map.setView(e.latlng, 16);
+
+}
             // set up the map
 
             map = new L.Map('map');
             // No momento em que o mapa é criado, já tratamos de tentar localizar o indivíduo
+            map.on('locationfound', onLocationFound);
             map.locate(watch=true, enableHighAccuracy=true);
             // create the tile layer with correct attribution
-            var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-            var osm = new L.TileLayer(osmUrl, {minZoom: 3, maxZoom: 19, attribution: osmAttrib});
+            var mapquestUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png';
+            var subDomains = ['otile1','otile2','otile3','otile4'];
+            var mapquestAttrib = 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.';
+var mapquest = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestAttrib, subdomains: subDomains});
+            //var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            //var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            //var osm = new L.TileLayer(osmUrl, {minZoom: 3, maxZoom: 19, attribution: osmAttrib});
             map.setView(new L.LatLng(-23.5, -46.6),15);
-            map.addLayer(osm);
+            //map.addLayer(osm);
+            map.addLayer(mapquest);
             resize();
 
 	///////////////////////////////////////////
@@ -229,6 +247,7 @@ function apaga_marcadores() {
     }
           pontoPartida = null;
           pontoDestino = null;
+          marcadorUsuarioNoMapa = false;
           array_layers = [];
 };
 $('#botao_zera_marcadores').click(apaga_marcadores);
@@ -240,9 +259,16 @@ $('#limpaRotas').click(function(){
 /////////////////////////////////////////
 // Localiza o cidadão
 ///////////////////////////////////////////
-$("#meAche").click(function(){
-  map.locate(watch=true, enableHighAccuracy=true);
+$('#meAche').click(function(){
+  if(!marcadorUsuarioNoMapa){
+    console.log("entrou no if !marcadorUsuarioNoMapa");
+    marcadorUsuario.addTo(map);
+    marcadorUsuarioNoMapa = true;
+  }
+  //map.setView(marcadorUsuario.getLatLng(), 17, {pan:{animate:true}, zoom:{animate:true}});
+  map.setView(marcadorUsuario.getLatLng(), 18, {pan:{animate:true}, zoom:{animate:true}});
 });
+
 
 }); // Fim do $('window').load()
 
