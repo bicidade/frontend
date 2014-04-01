@@ -56,6 +56,8 @@
             // set up the map
 
             map = new L.Map('map');
+            // No momento em que o mapa é criado, já tratamos de tentar localizar o indivíduo
+            map.locate(watch=true, enableHighAccuracy=true);
             // create the tile layer with correct attribution
             var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
@@ -222,7 +224,7 @@ $('#btnRota').click(function() {
 ///////////////////////////////////////////
 function apaga_marcadores() {
     for(var i=0; i<array_layers.length; i++) {
-              
+
         map.removeLayer(array_layers[i]);
     }
           pontoPartida = null;
@@ -233,6 +235,13 @@ $('#botao_zera_marcadores').click(apaga_marcadores);
 
 $('#limpaRotas').click(function(){
   apaga_marcadores();
+});
+
+/////////////////////////////////////////
+// Localiza o cidadão
+///////////////////////////////////////////
+$("#meAche").click(function(){
+  map.locate(watch=true, enableHighAccuracy=true);
 });
 
 }); // Fim do $('window').load()
@@ -345,13 +354,13 @@ $('#limpaRotas').click(function(){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bicidade</a>
+          <a class="navbar-brand" href="#">Bicidade<sup><i>BETA</i></sup></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div style="height: 1px;" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Me Ache</a></li>
+            <li><a href="#" id="meAche">Me Ache</a></li>
             <li><a href="#" data-toggle="modal" data-target="#modalOrigem">Marque Origem</a></li>
             <li><a href="#" data-toggle="modal" data-target="#modalDestino">Marque Destino</a></li>
             <li><a href="#" data-toggle="modal" data-target="#modalRota">Traçe rota</a></li>
