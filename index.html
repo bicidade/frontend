@@ -45,14 +45,14 @@
             var marcadorUsuarioNoMapa = false;
             var marcadorUsuario = L.marker([0,0], {bounceOnAdd: true});
             $(window).load(function() {
-                function resize(){
-                	$('#map').height($(window).height() - $('.navbar').height());
-                	$('#map').width($(window).width());
-                	$('#map').css('margin-top', 50);
-            }
-            // Já dá resize de primeira
-            resize();
-            $(window).on("resize", resize);
+            //     function resize(){
+            //     	$('#map').height($(window).height() - $('.navbar').height());
+            //     	$('#map').width($(window).width());
+            //     	$('#map').css('margin-top', 50);
+            // }
+            // // Já dá resize de primeira
+            // resize();
+            // $(window).on("resize", resize);
 
             // Now we create the map
 function onLocationFound(e) {
@@ -82,7 +82,7 @@ var mapquest = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestA
             map.setView(new L.LatLng(-23.5504, -46.6339),15);
             //map.addLayer(osm);
             map.addLayer(mapquest);
-            resize();
+            //resize();
 
 	///////////////////////////////////////////
     // PÕE CAMADA DE PARACICLOS
@@ -279,14 +279,62 @@ $('#meAche').click(function(){
 
         <!-- CSS code from Bootply.com editor -->
 
-        <style type="text/css">
-            html,body{
+<style type="text/css">
+html,body, #map{
   	height:100%;
+    width: 100%;
+    overflow: hidden;
 }
-
-#map {
+body {
+  padding-top: 50px;
+}
+/* #map {
 	width:100%;
-    height:100%;
+  height:100%;
+  margin-top: -100;
+}*/
+.leaflet-control-layers label {
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+.navbar-collapse.in {
+  overflow-y: hidden;
+}
+@media (max-width: 992px) {
+  .navbar .navbar-brand {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px){
+  .url-break {
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
+/* Print Handling */
+@media print {
+  .navbar {
+    display: none !important;
+  }
+  .leaflet-control-container {
+    display: none !important;
+  }
+}
+#loading {
+  position: absolute;
+  width: 220px;
+  height: 19px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -110px;
+  z-index: 20001;
 }
         </style>
 </head>
@@ -390,7 +438,7 @@ $('#meAche').click(function(){
         </div>
     </div>
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
