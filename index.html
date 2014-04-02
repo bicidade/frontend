@@ -79,7 +79,7 @@ var mapquest = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestA
             //var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             //var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
             //var osm = new L.TileLayer(osmUrl, {minZoom: 3, maxZoom: 19, attribution: osmAttrib});
-            map.setView(new L.LatLng(-23.5, -46.6),15);
+            map.setView(new L.LatLng(-23.5504, -46.6339),15);
             //map.addLayer(osm);
             map.addLayer(mapquest);
             resize();
@@ -296,11 +296,12 @@ $('#meAche').click(function(){
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Mas que raios é isto??</h4>
+                    <h4 class="modal-title">Mas que raios é isto?</h4>
                 </div>
                 <div class="modal-body">
-                <p>O Bicidade é um gerador de rotas pela cidade de São Paulo pensado para ciclistas. A vantagem do bicidade sobre os outros é poder escolher rotas minimizando a subida.<br>
-                O protótipo inicial foi desenvolvido para a Hackatona de 2014 da CET por Tiago Barufi, Tiago Fassoni e Tatyana Zabanova.<br></p>
+                <p>O Bicidade é um gerador de rotas pela cidade de São Paulo pensado para ciclistas. A vantagem do bicidade sobre os outros é poder escolher rotas minimizando a subida.<br></p>
+                <p>Infelizmente não temos dados de elevações de outras cidades para fazer rotas.</p>
+                <p>O protótipo inicial foi desenvolvido para a Hackatona de 2014 da CET por Tiago Barufi, Tiago Fassoni e Tatyana Zabanova.<br></p>
                 <p>O código-fonte é aberto e está disponível no nosso <a href="https://github.com/bicidade">GitHub</a>.</p>
                 <p>Para quaisquer dúvidas, reclamações, sugestões, patrocínios e doações de cervejas artesanais e cappuccinos para os desenvolvedores, fale conosco: <a href="contato@bicidade.net">contato@bicidade.net</a></p>
                 </div>
